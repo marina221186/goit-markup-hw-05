@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"  >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -50,7 +51,7 @@
             <!Шапка>
             <div class="hat-item">
              <h1 class="hat-type ">Эффективные решения для вашего бизнеса</h1>
-             <button class="model-btm" type="button">Заказать услугу</button>
+             <button class="model-btm" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
       
@@ -105,13 +106,22 @@
              <h2 class="title">Чем мы занимаемся</h2>
              <ul class="work-img list">
                  <li class="work-img-picture">
-                     <img class="work-picture" src="./imges/work/img4.png" alt="работа за копютером" width="370" height="294">
+                      <div class="work-img-picture-item">
+                         <img class="work-picture" src="./imges/work/img4.png" alt="работа за копютером" width="370" height="294">
+                         <p class="label">Десктопные приложения</p>
+                      </div>
                  </li>
                  <li class="work-img-picture">
-                     <img class="work-picture" src="./imges/work/img5.png" alt="телефон" width="370" height="294">
+                      <div class="work-img-picture-item">
+                          <img class="work-picture" src="./imges/work/img5.png" alt="телефон" width="370" height="294">
+                          <p class="label">Мобильные приложения</p>
+                      </div>
                  </li>
                  <li class="work-img-picture">
-                      <img class="work-picture" src="./imges/work/img6.png" alt="планшет" width="370" height="294">
+                     <div class="work-img-picture-item">
+                         <img class="work-picture" src="./imges/work/img6.png" alt="планшет" width="370" height="294">
+                         <p class="label">Дизайнерские решения</p>
+                      </div>
                  </li>
              </ul>
             </div>
@@ -376,5 +386,16 @@
         </div>
      </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-btn" data-modal-close>
+                <svg class="vector-btn" width="11" height="11">
+                    <use href="./imges/vector/symbol-defs.svg#icon-vector"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html> 
